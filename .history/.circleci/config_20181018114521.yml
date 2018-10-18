@@ -10,6 +10,8 @@ jobs:
         - v1-npm-deps-{{ checksum "package.json" }}
         - v1-npm-deps
     - run: npm install
+      command: |
+        npm install
     - save_cache:
         key: v1-npm-deps-{{ checksum "package.json" }}
         paths:
